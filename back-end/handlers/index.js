@@ -7,7 +7,7 @@ export const errorHandlerDataFount = (req, res, next) => {
 }
 
 
-export const errorHandler = (req, res, next) => {
+export const errorHandler = (err, req, res, next) => {
     res.status(err.status || 500).json({
         err: err.massage ||  'Something wents Wrong '
     })
